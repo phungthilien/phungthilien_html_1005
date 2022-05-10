@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=date]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.app{
+    width: 1200px;
+    margin: auto;
+}
+</style>
+<body>
+    <div class="app">
+        <form action=""name="myForm" >
+          <label for="fname">FullName</label>
+          <input type="text" name="fullname" id="fname" onblur="checkfullname()" name="firstname" placeholder="Your name..">
+          <label id="errorfname" for="" class="error"></label>
+          <label for="uname">Username</label>
+          <input type="text" name="username" id="uname" onblur="checkUsername()" name="uname" placeholder="Your username..">
+          <label id="erroruname" for="" class="error"></label>
+
+          <label for="pass">Password</label>
+          <input type="password" id="pass" onblur="checkPass()" name="passw" placeholder="Your pass..">
+          <label id="errorpass" for="" class=""></label>
+          <label for="repass">RePassword</label>
+          <input type="password" id="repass" onblur="checkRePass()" name="repass" placeholder="Your repass..">
+          <label id="errorRepass"  for="" class=""></label>
+          <p>Gender</p>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">Male</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">Female</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">Other</label> </br>
+
+          <label for="email">Email</label>
+          <input type="text" id="email" onblur="checkEmail()" name="mail" placeholder="Your repass..">
+          <label id="Errorremail"  for="" class=""></label>
+
+          <label for="phone">Phone number</label>
+          <input type="text" id="phone" onblur="checkPhone()" name="phone" placeholder="Your repass..">
+          <label id="errorphone"  for="" class=""></label>
+          <label for="adrress">Adrress</label>
+          <input type="text" id="adrress" onblur="checkAdress()" name="adrress" placeholder="Your repass..">
+          <label id="erorradrress"  for="" class=""></label>
+
+          <label for="date">Date</label>
+          <input type="date" id="date" onblur="checkdate()" name="birth" placeholder="Your date..">
+          <label id="erorrdate"  for="" class=""></label>
+        
+          <input type="submit" id="submit1" value="Submit">
+          <input type="submit" value="Cancel">
+        </form>
+      </div>
+      <script src="/JS/from.js"></script>
+</body>
+</html>

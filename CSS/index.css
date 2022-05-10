@@ -1,0 +1,222 @@
+html{
+    /* Tương ứng với 1.6rem = 16px */
+    font-size: 18px;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+ 
+}
+
+.header{
+
+    padding:10px 150px 0 150px;
+    height: 60px;
+    
+    background-image:linear-gradient(0,#fe6433,red) ;
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header__navbar-list {
+   list-style: none;
+   margin: 10px 0 0 0;
+   padding-left: 0;
+   display: flex;
+}
+.header__navbar-items{
+    padding-left: 30px;
+    position: relative;
+    min-height: 26px;
+    color: aliceblue;
+}
+.home-product-item{
+    position: relative;
+    background-color: var(--white-color);
+    margin-top: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 0.1rem 2px 0 rgb(0,0,0,0.1);
+    transition: transform linear 0.1s;
+    will-change: transform;
+    display: block;
+    text-decoration: none;
+    }
+    .home-product-item__img{
+        padding-top: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .home-product-item__name{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    height: 3.6rem;
+    color: var(--text-color);
+    margin: 10px 10px 6px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+    }
+    .home-product-item__price{
+        position: relative;
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    
+    }
+    .home-product-item__price-old{
+        font-size: 1.4rem;
+        color: #666;
+        text-decoration: line-through;
+        margin-left: 10px;
+    
+    }
+    .home-product-item__price-current{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-left: 10px;
+    }
+    .home-product-item__action{
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 10px 0;
+    
+    }
+    .home-product-item__like{
+    font-size: 1.4rem;
+    
+    }
+    .home-product-item__rating{
+    font-size: 1rem;
+    transform: scale(0.8);
+    transform-origin: right;
+    color: #ccc;
+    margin-left: auto;
+    margin-top: -1px;
+    /* zoom : để zoom to và nhỏ  */
+    }
+    
+    .home-product-item__star{
+        color: var(--star-gold);
+    } 
+    .home-product-item__sold{
+        font-size: 1.2rem;
+        color: var(--text-color);
+        margin-left: 6px;
+    
+    }
+    .home-product-item__origin{
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 10px 0;
+    color: #595959;
+    font-size: 1.2rem;
+    font-weight: 300;
+    }
+    
+    .home-product-item__favourite{
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: currentColor;
+    line-height: 1.7rem;
+    padding-right: 4px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    }
+    .home-product-item__favourite::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent;
+    filter: brightness(60%);
+    
+    }
+    .home-product-item__favourite span{ 
+    color: var(--white-color);
+    }
+    .home-product-item__favourite i{
+        font-size: 0.9rem;
+        margin: 0 4px;
+        color: var(--white-color);
+    }
+    .home-product-item__sale-off{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 36px;
+        text-align: center;
+        color: rgb(255, 216, 57,0.94);
+        background-color: currentColor;
+    
+    }
+    .home-product-item__sale-off::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-width: 0 20px 5px;
+    border-style: solid;
+    border-color: transparent currentColor transparent currentColor;
+    
+    }
+
+    .home-product-item:hover {
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+        transform: translateY(-0.1px);
+        border: 1px solid var(--primary-color);
+        z-index: 1;
+    }
+    .grid{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
+    .grid.wide{
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    .grid__column-2{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 16.6667% ;
+        }
+    .gird__row{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+    .grid__column-10{
+         
+        padding-left: 5px;
+        padding-right: 5px;
+            width: 83.3334%;
+    }
+    
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667% ;
+    }
+    /* 12%5=2.4 */
+    .gird__column-2-4{
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 20% ;
+    }
+
